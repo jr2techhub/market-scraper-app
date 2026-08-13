@@ -4,8 +4,8 @@ import {
   Zap, LayoutDashboard, Globe, BarChart3, Settings, LogOut, 
   Menu, X, Bell, Search, TrendingUp, Activity, Database, AlertCircle 
 } from 'lucide-react';
-import { useAuth } from '../../context/AuthContext';
-import { scrapingDataService } from '../../services/scrapingDataService';
+import { useAuth } from '../context/AuthContext';
+import { scrapingDataService } from '../services/scrapingDataService';
 import DashboardHome from '../components/DashboardHome';
 import TargetsView from '../components/TargetsView';
 import AnalyticsView from '../components/AnalyticsView';

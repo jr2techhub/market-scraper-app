@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Globe, CheckCircle, AlertTriangle, XCircle, Clock } from 'lucide-react';
-import { scrapingDataService } from '../../services/scrapingDataService';
+import { scrapingDataService } from '../services/scrapingDataService';
 import './TargetsView.scss';
 
 const TargetsView = ({ loading: parentLoading }) => {
