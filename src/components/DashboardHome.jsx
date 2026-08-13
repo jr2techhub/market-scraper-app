@@ -1,6 +1,6 @@
 import { TrendingUp, Activity, Database, AlertCircle } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { scrapingDataService } from '../../services/scrapingDataService';
+import { scrapingDataService } from '../services/scrapingDataService';
 import { useState, useEffect } from 'react';
 import './DashboardHome.scss';
 

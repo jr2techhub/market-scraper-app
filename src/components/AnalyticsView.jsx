@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
-import { scrapingDataService } from '../../services/scrapingDataService';
+import { scrapingDataService } from '../services/scrapingDataService';
 import './AnalyticsView.scss';
 
 const AnalyticsView = ({ loading: parentLoading }) => {
