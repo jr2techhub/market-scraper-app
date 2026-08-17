@@ -1,8 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Zap, BarChart3, Globe, Shield } from 'lucide-react';
 import './Landing.scss';
 
 const Landing = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="landing">
       {/* Navigation */}
@@ -14,14 +17,14 @@ const Landing = () => {
           </Link>
           
           <div className="nav-links">
-            <a href="#features">Features</a>
+            <a href="#features">{t('landing.features')}</a>
             <a href="#pricing">Pricing</a>
             <a href="#about">About</a>
           </div>
           
           <div className="nav-auth">
-            <Link to="/login" className="btn btn-ghost">Login</Link>
-            <Link to="/register" className="btn btn-primary">Get Started</Link>
+            <Link to="/login" className="btn btn-ghost">{t('landing.login')}</Link>
+            <Link to="/register" className="btn btn-primary">{t('landing.getStarted')}</Link>
           </div>
         </div>
       </nav>
@@ -32,22 +35,21 @@ const Landing = () => {
           <div className="hero-content">
             <div className="badge">
               <span className="badge-dot"></span>
-              Powerful Web Scraping Platform
+              {t('landing.subtitle')}
             </div>
             
             <h1 className="hero-title">
-              Extract Data from<br />
+              {t('landing.title')}<br />
               <span className="text-gradient">Any Website</span>
             </h1>
             
             <p className="hero-description">
-              Automate your data collection with our intelligent scraping platform. 
-              Get structured data from any website with just a few clicks.
+              {t('landing.description')}
             </p>
             
             <div className="hero-cta">
               <Link to="/register" className="btn btn-primary btn-lg">
-                Start Free Trial
+                {t('landing.getStarted')}
                 <Zap size={20} />
               </Link>
               <a href="#demo" className="btn btn-secondary btn-lg">
@@ -114,7 +116,7 @@ const Landing = () => {
               <span className="text-gradient">web scraping</span>
             </h2>
             <p className="section-description">
-              Our platform provides all the tools you need to extract, process, and analyze web data at scale.
+              {t('landing.description')}
             </p>
           </div>
           
@@ -123,9 +125,9 @@ const Landing = () => {
               <div className="feature-icon">
                 <Globe size={32} />
               </div>
-              <h3 className="feature-title">Universal Scraping</h3>
+              <h3 className="feature-title">{t('landing.feature1Title')}</h3>
               <p className="feature-description">
-                Scrape any website regardless of complexity. We handle JavaScript rendering, CAPTCHAs, and anti-bot measures.
+                {t('landing.feature1Desc')}
               </p>
             </div>
             
@@ -133,9 +135,9 @@ const Landing = () => {
               <div className="feature-icon">
                 <BarChart3 size={32} />
               </div>
-              <h3 className="feature-title">Real-time Analytics</h3>
+              <h3 className="feature-title">{t('landing.feature2Title')}</h3>
               <p className="feature-description">
-                Monitor your scraping jobs with detailed analytics and insights. Track success rates, response times, and more.
+                {t('landing.feature2Desc')}
               </p>
             </div>
             
@@ -143,9 +145,9 @@ const Landing = () => {
               <div className="feature-icon">
                 <Shield size={32} />
               </div>
-              <h3 className="feature-title">Proxy Network</h3>
+              <h3 className="feature-title">{t('landing.feature3Title')}</h3>
               <p className="feature-description">
-                Access our global proxy network with millions of IPs. Rotate automatically to avoid detection and blocking.
+                {t('landing.feature3Desc')}
               </p>
             </div>
           </div>
