@@ -1,10 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Zap, BarChart3, Globe, Shield } from 'lucide-react';
+import { Zap, BarChart3, Globe, Shield, Languages } from 'lucide-react';
 import './Landing.scss';
 
 const Landing = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <div className="landing">
@@ -18,11 +22,19 @@ const Landing = () => {
           
           <div className="nav-links">
             <a href="#features">{t('landing.features')}</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#about">About</a>
+            <a href="#pricing">{t('landing.pricing')}</a>
+            <a href="#about">{t('landing.about')}</a>
           </div>
           
           <div className="nav-auth">
+            <button 
+              onClick={() => changeLanguage(i18n.language === 'es' ? 'en' : 'es')}
+              className="btn btn-ghost language-btn"
+              title={i18n.language === 'es' ? 'Switch to English' : 'Cambiar a Español'}
+            >
+              <Languages size={18} />
+              {i18n.language === 'es' ? 'EN' : 'ES'}
+            </button>
             <Link to="/login" className="btn btn-ghost">{t('landing.login')}</Link>
             <Link to="/register" className="btn btn-primary">{t('landing.getStarted')}</Link>
           </div>
@@ -53,7 +65,7 @@ const Landing = () => {
                 <Zap size={20} />
               </Link>
               <a href="#demo" className="btn btn-secondary btn-lg">
-                View Demo
+                {t('landing.viewDemo')}
               </a>
             </div>
             
@@ -112,8 +124,8 @@ const Landing = () => {
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">
-              Everything you need for<br />
-              <span className="text-gradient">web scraping</span>
+              {t('landing.featuresTitle')}<br />
+              <span className="text-gradient">{t('landing.featuresSubtitle')}</span>
             </h2>
             <p className="section-description">
               {t('landing.description')}
@@ -163,7 +175,7 @@ const Landing = () => {
               <span className="logo-text">Scrape<span className="text-gradient">Hub</span></span>
             </Link>
             <p className="footer-tagline">
-              Professional web scraping infrastructure for modern businesses.
+              {t('landing.footerTagline')}
             </p>
           </div>
           

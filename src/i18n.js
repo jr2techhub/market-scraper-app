@@ -70,13 +70,18 @@ i18n
             "getStarted": "Get Started",
             "login": "Login",
             "features": "Features",
+            "pricing": "Pricing",
+            "about": "About",
+            "featuresTitle": "Everything you need for",
+            "featuresSubtitle": "web scraping",
             "feature1Title": "Real-time Data Extraction",
             "feature1Desc": "Extract data from multiple sources in real-time with our advanced scraping engine.",
             "feature2Title": "Advanced Analytics",
             "feature2Desc": "Gain insights from your data with powerful analytics and visualization tools.",
             "feature3Title": "Automated Workflows",
             "feature3Desc": "Set up automated scraping workflows and schedule regular data updates.",
-            "footer": "© 2024 ScrapeHub. All rights reserved."
+            "viewDemo": "View Demo",
+            "footerTagline": "Professional web scraping infrastructure for modern businesses."
           },
           // Auth
           "auth": {
@@ -183,13 +188,18 @@ i18n
             "getStarted": "Comenzar",
             "login": "Iniciar Sesión",
             "features": "Características",
+            "pricing": "Precios",
+            "about": "Acerca de",
+            "featuresTitle": "Todo lo que necesitas para",
+            "featuresSubtitle": "web scraping",
             "feature1Title": "Extracción de Datos en Tiempo Real",
             "feature1Desc": "Extrae datos de múltiples fuentes en tiempo real con nuestro motor de scraping avanzado.",
             "feature2Title": "Analítica Avanzada",
             "feature2Desc": "Obtén información de tus datos con poderosas herramientas de análisis y visualización.",
             "feature3Title": "Flujos de Trabajo Automatizados",
             "feature3Desc": "Configura flujos de trabajo de scraping automatizados y programa actualizaciones regulares de datos.",
-            "footer": "© 2024 ScrapeHub. Todos los derechos reservados."
+            "viewDemo": "Ver Demo",
+            "footerTagline": "Infraestructura profesional de web scraping para empresas modernas."
           },
           // Auth
           "auth": {
