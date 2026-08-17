@@ -1,14 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Zap, BarChart3, Globe, Shield, Languages } from 'lucide-react';
+import { Zap, BarChart3, Globe, Shield } from 'lucide-react';
+import LanguageSelector from '../components/LanguageSelector';
 import './Landing.scss';
 
 const Landing = () => {
-  const { t, i18n } = useTranslation();
-  
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
+  const { t } = useTranslation();
 
   return (
     <div className="landing">
@@ -27,14 +24,7 @@ const Landing = () => {
           </div>
           
           <div className="nav-auth">
-            <button 
-              onClick={() => changeLanguage(i18n.language === 'es' ? 'en' : 'es')}
-              className="btn btn-ghost language-btn"
-              title={i18n.language === 'es' ? 'Switch to English' : 'Cambiar a Español'}
-            >
-              <Languages size={18} />
-              {i18n.language === 'es' ? 'EN' : 'ES'}
-            </button>
+            <LanguageSelector />
             <Link to="/login" className="btn btn-ghost">{t('landing.login')}</Link>
             <Link to="/register" className="btn btn-primary">{t('landing.getStarted')}</Link>
           </div>
