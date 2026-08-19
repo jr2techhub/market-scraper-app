@@ -10,32 +10,23 @@ build/
 *.js
 !src/**/*.js
 
-# Environment
-.env
-.env.local
-*.env.*
+# Cache directories
+.cache/
+.vite/
+.vercel/
 
-# Editors
-.vscode/
-.idea/
+# Environment variables
+.env*
+!.env.example
 
-# Logs and temp files
+# Logs
 *.log
-*.tmp
-*.swp
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Coverage
-coverage/
-htmlcov/
-.coverage
 
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
 ```
