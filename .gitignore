@@ -5,14 +5,10 @@ node_modules/
 # Build artifacts
 dist/
 build/
+
+# Ignore JS files except in src directory
 *.js
-*.mjs
-*.cjs
-*.ts
-*.mts
-*.cts
-*.jsx
-*.tsx
+!src/**/*.js
 
 # Cache directories
 .cache/
