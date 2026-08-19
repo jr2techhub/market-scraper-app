@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Zap, BarChart3, Globe, Shield } from 'lucide-react';
+import LanguageSelector from '../components/LanguageSelector';
 import './Landing.scss';
 
 const Landing = () => {
@@ -18,11 +19,12 @@ const Landing = () => {
           
           <div className="nav-links">
             <a href="#features">{t('landing.features')}</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#about">About</a>
+            <a href="#pricing">{t('landing.pricing')}</a>
+            <a href="#about">{t('landing.about')}</a>
           </div>
           
           <div className="nav-auth">
+            <LanguageSelector />
             <Link to="/login" className="btn btn-ghost">{t('landing.login')}</Link>
             <Link to="/register" className="btn btn-primary">{t('landing.getStarted')}</Link>
           </div>
@@ -53,7 +55,7 @@ const Landing = () => {
                 <Zap size={20} />
               </Link>
               <a href="#demo" className="btn btn-secondary btn-lg">
-                View Demo
+                {t('landing.viewDemo')}
               </a>
             </div>
             
@@ -112,8 +114,8 @@ const Landing = () => {
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">
-              Everything you need for<br />
-              <span className="text-gradient">web scraping</span>
+              {t('landing.featuresTitle')}<br />
+              <span className="text-gradient">{t('landing.featuresSubtitle')}</span>
             </h2>
             <p className="section-description">
               {t('landing.description')}
@@ -163,28 +165,28 @@ const Landing = () => {
               <span className="logo-text">Scrape<span className="text-gradient">Hub</span></span>
             </Link>
             <p className="footer-tagline">
-              Professional web scraping infrastructure for modern businesses.
+              {t('landing.footerTagline')}
             </p>
           </div>
           
           <div className="footer-links">
             <div className="footer-column">
-              <h4>Product</h4>
-              <a href="#features">Features</a>
-              <a href="#pricing">Pricing</a>
-              <a href="#api">API</a>
+              <h4>{t('nav.product')}</h4>
+              <a href="#features">{t('nav.features')}</a>
+              <a href="#pricing">{t('nav.pricing')}</a>
+              <a href="#api">{t('nav.api')}</a>
             </div>
             <div className="footer-column">
-              <h4>Company</h4>
-              <a href="#about">About</a>
-              <a href="#blog">Blog</a>
-              <a href="#careers">Careers</a>
+              <h4>{t('nav.company')}</h4>
+              <a href="#about">{t('nav.about')}</a>
+              <a href="#blog">{t('nav.blog')}</a>
+              <a href="#careers">{t('nav.careers')}</a>
             </div>
             <div className="footer-column">
-              <h4>Support</h4>
-              <a href="#docs">Documentation</a>
-              <a href="#help">Help Center</a>
-              <a href="#contact">Contact</a>
+              <h4>{t('nav.support')}</h4>
+              <a href="#docs">{t('nav.documentation')}</a>
+              <a href="#help">{t('nav.helpCenter')}</a>
+              <a href="#contact">{t('nav.contact')}</a>
             </div>
           </div>
         </div>
@@ -192,6 +194,26 @@ const Landing = () => {
         <div className="footer-bottom">
           <div className="container">
             <p>&copy; 2024 ScrapeHub. All rights reserved.</p>
+          </div>
+        </div>
+
+        {/* Newsletter Section */}
+        <div className="newsletter-section">
+          <div className="container newsletter-container">
+            <div className="newsletter-content">
+              <h3>{t('newsletter.title')}</h3>
+              <p>{t('newsletter.subtitle')}</p>
+            </div>
+            <form className="newsletter-form">
+              <input 
+                type="email" 
+                placeholder={t('newsletter.placeholder')} 
+                className="newsletter-input"
+              />
+              <button type="submit" className="btn btn-primary">
+                {t('newsletter.button')}
+              </button>
+            </form>
           </div>
         </div>
       </footer>
