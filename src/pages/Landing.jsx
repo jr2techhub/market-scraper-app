@@ -171,22 +171,22 @@ const Landing = () => {
           
           <div className="footer-links">
             <div className="footer-column">
-              <h4>Product</h4>
-              <a href="#features">Features</a>
-              <a href="#pricing">Pricing</a>
-              <a href="#api">API</a>
+              <h4>{t('nav.product')}</h4>
+              <a href="#features">{t('nav.features')}</a>
+              <a href="#pricing">{t('nav.pricing')}</a>
+              <a href="#api">{t('nav.api')}</a>
             </div>
             <div className="footer-column">
-              <h4>Company</h4>
-              <a href="#about">About</a>
-              <a href="#blog">Blog</a>
-              <a href="#careers">Careers</a>
+              <h4>{t('nav.company')}</h4>
+              <a href="#about">{t('nav.about')}</a>
+              <a href="#blog">{t('nav.blog')}</a>
+              <a href="#careers">{t('nav.careers')}</a>
             </div>
             <div className="footer-column">
-              <h4>Support</h4>
-              <a href="#docs">Documentation</a>
-              <a href="#help">Help Center</a>
-              <a href="#contact">Contact</a>
+              <h4>{t('nav.support')}</h4>
+              <a href="#docs">{t('nav.documentation')}</a>
+              <a href="#help">{t('nav.helpCenter')}</a>
+              <a href="#contact">{t('nav.contact')}</a>
             </div>
           </div>
         </div>
@@ -194,6 +194,26 @@ const Landing = () => {
         <div className="footer-bottom">
           <div className="container">
             <p>&copy; 2024 ScrapeHub. All rights reserved.</p>
+          </div>
+        </div>
+
+        {/* Newsletter Section */}
+        <div className="newsletter-section">
+          <div className="container newsletter-container">
+            <div className="newsletter-content">
+              <h3>{t('newsletter.title')}</h3>
+              <p>{t('newsletter.subtitle')}</p>
+            </div>
+            <form className="newsletter-form">
+              <input 
+                type="email" 
+                placeholder={t('newsletter.placeholder')} 
+                className="newsletter-input"
+              />
+              <button type="submit" className="btn btn-primary">
+                {t('newsletter.button')}
+              </button>
+            </form>
           </div>
         </div>
       </footer>
